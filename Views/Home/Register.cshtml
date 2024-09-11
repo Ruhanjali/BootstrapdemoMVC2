@@ -1,0 +1,46 @@
+﻿@model Bootstrapdemo.Models.RegisterViewModel
+
+@{
+    ViewBag.Title = "Register";
+}
+
+<h2>Register</h2>
+@using (Html.BeginForm())
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.Name)
+        @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Email)
+        @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Password)
+        @Html.TextBoxFor(m => m.Password, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Confirmpassword)
+        @Html.TextBoxFor(m => m.Confirmpassword, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Gender)
+        <div class="radio-inline">
+            @Html.RadioButtonFor(m => m.Gender, "M") Male
+        </div>
+        <div class="radio-inline">
+            @Html.RadioButtonFor(m => m.Gender, "F") Female
+        </div>
+        <div>
+
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="checkbox">
+         @Html.CheckBoxFor( m => m.IsAgree) I agree terms and condition
+        </div>
+    </div>
+    <div class="form-grop">
+      <input type="submit" value="Register" class="btn btn-default" />
+    </div>
+}

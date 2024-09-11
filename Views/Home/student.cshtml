@@ -1,0 +1,45 @@
+﻿
+
+@using Bootstrapdemo.Models;
+
+@model  Bootstrapdemo.Models.Student
+
+@{
+    ViewBag.Title = "student";
+}
+
+@using (Html.BeginForm())
+{
+        <div>
+            @Html.ValidationSummary(true, "Error")
+        </div>
+        <div class="form-group">
+            <label>Roll No.</label>
+            @Html.TextBox("Rollno", null, new { @class = "form-control" })
+            @Html.ValidationMessage("Rollno")
+        </div>
+        <div class="form-group">
+            <label>Name</label>
+            @Html.TextBox("Name", null, new { @class = "form-control" })
+            @Html.ValidationMessage("Name")
+        </div>
+        <div class="form-group">
+            <label>Contact No.</label>
+            @Html.TextBox("Contact", null, new { @class = "form-control" })
+            @Html.ValidationMessage("Contact")
+        </div>
+        <div class="form-group">
+            <label>Email</label>
+            @Html.TextBox("Email", null, new { @class = "form-control" })
+            @Html.ValidationMessage("Email")
+        </div>
+        <div class="form-group">
+            <label>BithDt</label>
+            @Html.TextBox("BithDt", null, new { @class = "form-control" })
+            @Html.ValidationMessage("BithDt")
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Save" class="btn btn-dark" />
+        </div>
+   
+}

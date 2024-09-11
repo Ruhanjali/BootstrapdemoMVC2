@@ -1,0 +1,35 @@
+﻿@using Bootstrapdemo.Models
+@model Marksheet
+
+@{
+    ViewBag.Title = "WithViewModel";
+}
+
+<h2>WithViewModel</h2>
+
+<div class="row">
+    <div class="col-sm-3">
+        <lable>@Model.MyStudent.Name</lable>
+    </div>
+    <div class="col-sm-9">
+        <lable>@Model.MyStudent.RollNo</lable>
+    </div>
+</div>
+<table class="table">
+    <tr>
+        <th>HindiMarks</th>
+        <td>@Model.MyAssesment.HindiMarks</td>
+    </tr>
+    <tr>
+        <th>EnglishMarks</th>
+        <td>@Model.MyAssesment.Englishmarks</td>
+    </tr>
+    <tr>
+        <th>HistoryMarks</th>
+        <td>@Model.MyAssesment.HistoryMarks</td>
+    </tr>
+    <tr>
+        <th>Total</th>
+        <td>@Model.Total</td>
+    </tr>
+</table>

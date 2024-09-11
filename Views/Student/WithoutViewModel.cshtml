@@ -1,0 +1,35 @@
+﻿@using Bootstrapdemo.Models
+@model Student
+
+
+@{
+    ViewBag.Title = "WithoutViewModel";
+    Assesment obj = ViewBag.Sdetail;
+}
+}
+
+<h2>WithoutViewModel</h2>
+
+<div class="row">
+    <div class="col-sm-3">
+        <lable>Rollno : @Model.RollNo</lable>
+    </div>
+    <div class="col-sm-9">
+        <lable>Name : @Model.Name</lable>
+    </div>
+</div>
+<table>
+    <tr>
+        <td>Eglish</td>
+        <td>@obj.Englishmarks</td>
+    </tr>
+    <tr>
+        <td>Hindi</td>
+        <td>@obj.HindiMarks</td>
+    </tr>
+    <tr>
+        <td>History</td>
+        <td>@obj.HistoryMarks</td>
+    </tr>
+</table>
+
